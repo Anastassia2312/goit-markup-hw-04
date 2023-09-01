@@ -7,6 +7,7 @@
   --accent-color: #2e2f42;
   --accent-font: 'Raleway', sans-serif;
 }
+
 body {
   color: #434455;
   background-color: var(--main-white);
@@ -532,7 +533,7 @@ h3 {
 
 .socials-list {
   display: flex;
-  column-gap: 16px;
+  gap: 16px;
 }
 
 .socials {
@@ -566,7 +567,8 @@ h3 {
 }
 
 .socials-item-link:hover,
-.socials-item-link:active {
+.socials-item-link:active,
+.socials-item-link:focus {
   background-color: #31d0aa;
 }
 
