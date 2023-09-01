@@ -71,6 +71,10 @@ main {
   display: flex;
   background-color: #fff;
   border-bottom: 1px solid var(--cornflower);
+
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -200,6 +204,7 @@ main {
 .hero {
   padding-top: 188px;
   padding-bottom: 188px;
+  max-width: 1440px;
 
   background-color: var(--accent-color);
   background-image: linear-gradient(
@@ -259,6 +264,7 @@ main {
   align-items: center;
   justify-content: center;
   width: calc((100%-72px) / 4);
+  height: 112px;
 
   padding: 24px;
   border-radius: 4px;
@@ -379,12 +385,17 @@ main {
   margin-top: 8px;
 }
 
+.socials-item {
+  width: 40px;
+  height: 40px;
+}
+
 .team-member-socials-item-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   padding: 8px;
   border-radius: 50%;
   background-color: var(--primary-brand-color);
@@ -392,7 +403,8 @@ main {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-member-socials-item-link:hover {
+.team-member-socials-item-link:hover,
+.team-member-socials-item-link:focus {
   background-color: var(--pressed-state-color);
 }
 
@@ -523,8 +535,9 @@ main {
 }
 
 .footer-wrapper {
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
+
+  align-items: baseline;
 }
 
 .socials-list {
@@ -562,7 +575,8 @@ main {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socials-item-link:hover {
+.socials-item-link:hover,
+.socials-item-link:active {
   background-color: #31d0aa;
 }
 
