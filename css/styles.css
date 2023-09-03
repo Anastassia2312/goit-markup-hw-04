@@ -127,21 +127,23 @@ h3 {
   color: var(--pressed-state-color);
 }
 
-.list-link:hover::after,
-.list-link:focus::after,
-.list-link:active::after {
+.list-link::after {
   display: block;
   content: '';
   height: 4px;
   border-radius: 2px;
-  background-color: var(--pressed-state-color);
   width: 100%;
-
   position: absolute;
   left: 0;
   bottom: -1px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-link:hover::after,
+.list-link:focus::after,
+.list-link:active::after {
+  background-color: var(--pressed-state-color);
 }
 
 .list-link-active::after {
